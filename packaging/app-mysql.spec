@@ -1,10 +1,12 @@
 
 Name: app-mysql
+Group: ClearOS/Apps
 Version: 6.2.0.beta3
 Release: 1%{dist}
 Summary: MySQL Server
 License: GPLv3
-Group: ClearOS/Apps
+Packager: ClearFoundation
+Vendor: ClearFoundation
 Source: %{name}-%{version}.tar.gz
 Buildarch: noarch
 Requires: %{name}-core = %{version}-%{release}
@@ -15,8 +17,8 @@ MySQL is a popular, open-source, Relational Database Management System (RDMS).  
 
 %package core
 Summary: MySQL Server - APIs and install
-License: LGPLv3
 Group: ClearOS/Libraries
+License: LGPLv3
 Requires: app-base-core
 Requires: app-network-core
 Requires: mysql-server >= 5.1.52
