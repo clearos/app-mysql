@@ -82,32 +82,36 @@ class Setting extends ClearOS_Controller
 
         $form_ok = $this->form_validation->run();
 
+        // Extra validation
+        //-----------------
+
+        if ($this->input->post('submit')) {
+            $current_password = $this->input->post('current_password');
+            $password = $this->input->post('password');
+            $verify = $this->input->post('verify');
+        } else {
+            $current_password = '';
+            $password = $this->input->post('new_password');
+            $verify = $this->input->post('new_verify');
+        }
+
+        if ($form_ok) {
+            if ($password !== $verify) {
+                $this->form_validation->set_error('new_verify', lang('base_password_and_verify_do_not_match'));
+                $this->form_validation->set_error('verify', lang('base_password_and_verify_do_not_match'));
+                $form_ok = FALSE;
+            }
+        }
+
         // Handle form submit
         //-------------------
 
         if (($this->input->post('submit') || $this->input->post('submit_new')) && $form_ok) {
             try {
-                if ($this->input->post('submit')) {
-                    $current_password = $this->input->post('current_password');
-                    $password = $this->input->post('password');
-                    $verify = $this->input->post('verify');
-                } else {
-                    $current_password = '';
-                    $password = $this->input->post('new_password');
-                    $verify = $this->input->post('new_verify');
-                }
-
-                $match = $this->mysql->validate_password_verify($password, $verify);
-
-                // FIXME: form_validation widget can't handle two inputs?
-                if ($match)
-                    throw new Engine_Exception($match);
-
                 $this->mysql->set_root_password($current_password, $password);
 
                 $this->page->set_message(lang('mysql_password_updated'), 'info');
                 redirect('/mysql');
-
             } catch (Exception $e) {
                 $this->page->view_exception($e);
             }
