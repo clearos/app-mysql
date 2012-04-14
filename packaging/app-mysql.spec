@@ -1,7 +1,7 @@
 
 Name: app-mysql
 Epoch: 1
-Version: 1.0.10
+Version: 1.1.0
 Release: 1%{dist}
 Summary: MySQL Server
 License: GPLv3
@@ -15,7 +15,7 @@ Requires: app-base
 MySQL is a popular, open-source, Relational Database Management System (RDMS).  It can be configured to run database driven applications, websites, CRM and practically any other resource requiring a relational storage service.
 
 %package core
-Summary: MySQL Server - APIs and install
+Summary: MySQL Server - Core
 License: LGPLv3
 Group: ClearOS/Libraries
 Requires: app-base-core
