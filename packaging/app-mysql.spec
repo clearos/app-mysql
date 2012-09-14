@@ -1,7 +1,7 @@
 
 Name: app-mysql
 Epoch: 1
-Version: 1.1.0
+Version: 1.2.6
 Release: 1%{dist}
 Summary: MySQL Server
 License: GPLv3
@@ -19,6 +19,7 @@ Summary: MySQL Server - Core
 License: LGPLv3
 Group: ClearOS/Libraries
 Requires: app-base-core
+Requires: app-base-core >= 1:1.2.6
 Requires: app-network-core
 Requires: mysql-server >= 5.1.52
 Requires: phpMyAdmin >= 3.4.7

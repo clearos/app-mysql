@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'mysql';
-$app['version'] = '1.1.0';
+$app['version'] = '1.2.6';
 $app['release'] = '1';
 $app['vendor'] = 'ClearFoundation';
 $app['packager'] = 'ClearFoundation';
@@ -32,6 +32,7 @@ $app['subcategory'] = lang('base_subcategory_database');
 /////////////////////////////////////////////////////////////////////////////
 
 $app['core_requires'] = array(
+    'app-base-core >= 1:1.2.6',
     'app-network-core', 
     'mysql-server >= 5.1.52',
     'phpMyAdmin >= 3.4.7'
