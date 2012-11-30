@@ -34,6 +34,7 @@ $app['subcategory'] = lang('base_subcategory_database');
 $app['core_requires'] = array(
     'app-base-core >= 1:1.2.6',
     'app-network-core', 
+    'app-storage-core >= 1:1.4.7',
     'mysql-server >= 5.1.52',
     'phpMyAdmin >= 3.4.7'
 );

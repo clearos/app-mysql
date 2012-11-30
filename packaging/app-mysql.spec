@@ -21,6 +21,7 @@ Group: ClearOS/Libraries
 Requires: app-base-core
 Requires: app-base-core >= 1:1.2.6
 Requires: app-network-core
+Requires: app-storage-core >= 1:1.4.7
 Requires: mysql-server >= 5.1.52
 Requires: phpMyAdmin >= 3.4.7
 
