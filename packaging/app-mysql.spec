@@ -1,7 +1,7 @@
 
 Name: app-mysql
 Epoch: 1
-Version: 1.2.6
+Version: 1.4.7
 Release: 1%{dist}
 Summary: MySQL Server
 License: GPLv3
@@ -37,8 +37,7 @@ This package provides the core API and libraries.
 mkdir -p -m 755 %{buildroot}/usr/clearos/apps/mysql
 cp -r * %{buildroot}/usr/clearos/apps/mysql/
 
-install -D -m 0644 packaging/mysql-default.conf %{buildroot}/etc/storage.d/mysql-default.conf
-install -D -m 0644 packaging/mysql.php %{buildroot}/var/clearos/storage/plugins/mysql.php
+install -D -m 0644 packaging/mysql_default.conf %{buildroot}/etc/clearos/storage.d/mysql_default.conf
 install -D -m 0644 packaging/mysqld.php %{buildroot}/var/clearos/base/daemon/mysqld.php
 
 %post
@@ -82,6 +81,5 @@ exit 0
 /usr/clearos/apps/mysql/deploy
 /usr/clearos/apps/mysql/language
 /usr/clearos/apps/mysql/libraries
-/etc/storage.d/mysql-default.conf
-/var/clearos/storage/plugins/mysql.php
+/etc/clearos/storage.d/mysql_default.conf
 /var/clearos/base/daemon/mysqld.php

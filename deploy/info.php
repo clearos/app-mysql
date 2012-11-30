@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'mysql';
-$app['version'] = '1.2.6';
+$app['version'] = '1.4.7';
 $app['release'] = '1';
 $app['vendor'] = 'ClearFoundation';
 $app['packager'] = 'ClearFoundation';
@@ -39,7 +39,6 @@ $app['core_requires'] = array(
 );
 
 $app['core_file_manifest'] = array( 
-    'mysql-default.conf' => array ( 'target' => '/etc/storage.d/mysql-default.conf' ),
-    'mysql.php' => array( 'target' => '/var/clearos/storage/plugins/mysql.php' ),
-    'mysqld.php'=> array('target' => '/var/clearos/base/daemon/mysqld.php'),
+    'mysql_default.conf' => array ( 'target' => '/etc/clearos/storage.d/mysql_default.conf' ),
+    'mysqld.php'=> array( 'target' => '/var/clearos/base/daemon/mysqld.php' ),
 );
