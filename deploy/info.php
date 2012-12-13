@@ -43,3 +43,9 @@ $app['core_file_manifest'] = array(
     'mysql_default.conf' => array ( 'target' => '/etc/clearos/storage.d/mysql_default.conf' ),
     'mysqld.php'=> array( 'target' => '/var/clearos/base/daemon/mysqld.php' ),
 );
+
+$app['delete_dependency'] = array(
+    'app-mysql-core',
+    'mysql-server',
+    'phpMyAdmin'
+);
