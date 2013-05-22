@@ -3,9 +3,9 @@
 /**
  * MySQL ajax helpers.
  *
- * @category   ClearOS
- * @package    MySQL
- * @subpackage Javascript
+ * @category   apps
+ * @package    mysql
+ * @subpackage javascript
  * @author     ClearFoundation <developer@clearfoundation.com>
  * @copyright  2011 ClearFoundation
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
