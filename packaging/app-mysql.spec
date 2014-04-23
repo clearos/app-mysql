@@ -1,7 +1,7 @@
 
 Name: app-mysql
 Epoch: 1
-Version: 1.4.14
+Version: 1.5.40
 Release: 1%{dist}
 Summary: MySQL Server
 License: GPLv3
@@ -23,7 +23,7 @@ Requires: app-base-core >= 1:1.2.6
 Requires: app-network-core
 Requires: app-storage-core >= 1:1.4.7
 Requires: mysql-server >= 5.1.52
-Requires: phpMyAdmin >= 3.4.7
+Requires: phpMyAdmin >= 4.1.13
 
 %description core
 MySQL is a popular, open-source, Relational Database Management System (RDMS).  It can be configured to run database driven applications, websites, CRM and practically any other resource requiring a relational storage service.
@@ -77,7 +77,6 @@ exit 0
 %files core
 %defattr(-,root,root)
 %exclude /usr/clearos/apps/mysql/packaging
-%exclude /usr/clearos/apps/mysql/tests
 %dir /usr/clearos/apps/mysql
 /usr/clearos/apps/mysql/deploy
 /usr/clearos/apps/mysql/language
