@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'mysql';
-$app['version'] = '1.6.5';
+$app['version'] = '1.6.7';
 $app['release'] = '1';
 $app['vendor'] = 'ClearFoundation';
 $app['packager'] = 'ClearFoundation';
@@ -36,7 +36,7 @@ $app['core_requires'] = array(
     'app-network-core', 
     'app-storage-core >= 1:1.4.7',
     'mysql-server >= 5.1.52',
-    'phpMyAdmin >= 4.1.13'
+    'phpMyAdmin >= 4.0.10.5'
 );
 
 $app['core_file_manifest'] = array( 
