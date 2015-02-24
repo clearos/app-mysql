@@ -3,7 +3,7 @@
 # Check phpMyAdmin configuration
 #-------------------------------
 
-CHECK=`grep "^\$cfg\[['\"]blowfish_secret['\"]\]" /etc/phpMyAdmin/config.inc.php`
+CHECK=`grep "^\\$cfg\[.blowfish_secret.\]" /etc/phpMyAdmin/config.inc.php`
 if [ -z "$CHECK" ]; then
     logger -p local6.notice -t installer "app-mysql-core - adding blowfish secret"
     SECRET=`openssl rand -base64 32 | sed 's/\//_/g'`
